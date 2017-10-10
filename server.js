@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 const path = require("path");
-app.set("views", path.resolve(__dirname, "views"));
+app.set("views", path.resolve(__dirname, "./client/views"));
 app.set("view engine", "ejs");
 const moment = require("moment");
 
