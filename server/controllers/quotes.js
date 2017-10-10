@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 const Quote = mongoose.model("Quote");
+const moment = require("moment");
 module.exports = {
         show: function(req, res){
             Quote.find({}, (err, quote) =>{
             if(err){
+                console.log(quote.errors)
                 res.render("quotes", {errors:quote.errors});
             } else{
                 console.log(quote)
